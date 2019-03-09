@@ -1,0 +1,2 @@
+export const HANDLE_SIDEBAR = 'HANDLE_SIDEBAR';
+

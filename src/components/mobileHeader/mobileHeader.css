@@ -1,0 +1,91 @@
+.mainHeader {
+  display: flex;
+  background-color: var(--MAIN_COLOR);
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 2rem;
+}
+
+.mainHeader .Burger {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainHeader .Burger > button {
+  background: none;
+  color: var(--TEXT_COLOR);
+  border: none;
+  cursor: pointer;
+}
+
+.mainHeader .Burger > button > svg {
+  font-size: 30px;
+}
+
+.mainHeader .Account {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainHeader .Account > a > svg {
+  color: var(--TEXT_COLOR);
+  font-size: 30px;
+}
+
+.navigate {
+  background-color: var(--MAIN_COLOR);
+  padding: 5px 2rem;
+}
+
+.navigate > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 100px;
+}
+
+.navigate > ul > li {
+  list-style-type: none;
+  margin: 0 10px;
+  font-size: 25px;
+}
+
+.navigate > ul > li > a {
+  color: var(--TEXT_COLOR);
+  text-decoration: none;
+  position: relative;
+}
+
+.navigate > ul > li:hover > a::after {
+  right: 0;
+}
+
+.navigate > ul > li > a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  border-bottom: 2px solid #3d3d3d;
+  transition: right 0.5s;
+}
+
+@media (min-width: 768px) {
+  .mobileHeader {
+    display: none;
+  }
+}
