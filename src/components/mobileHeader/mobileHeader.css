@@ -1,4 +1,4 @@
-.mainHeader {
+.mobileHeader {
   display: flex;
   background-color: var(--MAIN_COLOR);
   flex-direction: row;
@@ -6,9 +6,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 5px 2rem;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--SECOND_COLOR);
 }
 
-.mainHeader .Burger {
+.mobileHeader .Burger {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -17,18 +20,18 @@
   justify-content: space-between;
 }
 
-.mainHeader .Burger > button {
+.mobileHeader .Burger > button {
   background: none;
   color: var(--TEXT_COLOR);
   border: none;
   cursor: pointer;
 }
 
-.mainHeader .Burger > button > svg {
+.mobileHeader .Burger > button > svg {
   font-size: 30px;
 }
 
-.mainHeader .Account {
+.mobileHeader .Account {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -37,7 +40,7 @@
   justify-content: space-between;
 }
 
-.mainHeader .Account > a > svg {
+.mobileHeader .Account > a > svg {
   color: var(--TEXT_COLOR);
   font-size: 30px;
 }

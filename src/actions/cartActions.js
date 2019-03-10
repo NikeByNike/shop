@@ -8,3 +8,12 @@ export const setCartItem = (item) => {
     });
   };
 };
+
+export const deleteCartItem = (id) => {
+  return dispatch => {
+    dispatch({
+      type: cartEvents.DELETE_ITEM_CART,
+      data: id
+    });
+  };
+};

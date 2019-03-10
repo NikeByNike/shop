@@ -70,6 +70,7 @@
   justify-content: space-between;
 }
 
+.mainHeader .Account > .Cart > a > svg,
 .mainHeader .Account > a > svg {
   color: var(--TEXT_COLOR);
   font-size: 30px;

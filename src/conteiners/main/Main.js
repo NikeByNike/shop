@@ -3,6 +3,9 @@ import { connect } from "react-redux";
 import { Input, Button } from "@material-ui/core";
 
 import * as cartActions from "../../actions/cartActions";
+import Card from '../../components/card/Card';
+
+import "./main.css";
 
 class Main extends Component {
   state = {
@@ -23,35 +26,21 @@ class Main extends Component {
   };
 
   render() {
-    const { products } = this.props.cart;
+    const { products } = this.props.shop;
     return (
       <>
-        <Input
-          onChange={e => this.handleChangeInput(e.target.value)}
-          value={this.state.input}
-        />
-        <Button onClick={() => this.setCartItem()}>СОХРОНИТЬ</Button>
-        {products.map(item => (
-          <div>
-            {item.name}
-          </div>
-        ))}
-        <div className="firstContent">
-          <p>
-            <i>
-              Artisaire Presents
-            </i>
-          </p>
-          <h1><span>The Wedding Shop</span></h1>
-          <p>Curated Wedding Heirlooms For The Artful Bride</p>
-        </div>
+        <section className="cards">
+          {products.map(item => (
+            <Card key={item.id} item={item} />
+          ))}
+        </section>
       </>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  cart: state.cart
+  shop: state.shop
 });
 
 const mapDispatchToProps = dispatch => ({

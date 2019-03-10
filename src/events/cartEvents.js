@@ -1,2 +1,3 @@
 export const UPDATE_CART = 'UPDATE_CART';
+export const DELETE_ITEM_CART = 'DELETE_ITEM_CART';
 
