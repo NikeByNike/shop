@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Switch, withRouter } from "react-router-dom";
-import { Route } from 'react-router';
+import { Switch, withRouter, Route } from "react-router-dom";
 
 import Main from '../../conteiners/main/Main';
+import About from '../../conteiners/about/About';
 
 class Content extends Component {
 
@@ -13,11 +13,12 @@ class Content extends Component {
           <Route
             exact
             path="/"
-            component={Main}
+            render={ props => <Main {...props}/>}
           />
           <Route
+            exact
             path="/about"
-            component={Main}
+            render={ props => <About {...props}/>}
           />
         </Switch>
       </>

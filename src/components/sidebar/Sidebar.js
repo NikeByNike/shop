@@ -16,7 +16,7 @@ class Sidebar extends Component {
           <ul>
             {nav.map(item => (
               <li>
-                <NavLink to={item.link}>
+                <NavLink onClick={() => this.props.handleSidebar()} to={item.link}>
                   {item.title}
                 </NavLink>
               </li>

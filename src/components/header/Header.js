@@ -13,6 +13,7 @@ class Header extends Component {
     const { nav } = this.props.menu;
 
     return (
+      <>
       <div className="header">
         <div className="contacts">
           <div>Контакты</div>
@@ -38,18 +39,19 @@ class Header extends Component {
             <NavLink to="/"><CartOutline/></NavLink>
           </div>
         </div>
-        <div className="navigate">
-          <ul>
-            {nav.map(item => (
-              <li>
-                <NavLink to={item.link}>
-                  {item.title}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
+      <div className="navigate">
+      <ul>
+      {nav.map(item => (
+          <li>
+            <NavLink to={item.link}>
+              {item.title}
+            </NavLink>
+          </li>
+        ))}
+  </ul>
+  </div>
+    </>
     );
   }
 }

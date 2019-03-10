@@ -1,5 +1,4 @@
 .header {
-  border-bottom: 1px solid var(--SECOND_COLOR);
 }
 
 .contacts {
@@ -79,6 +78,9 @@
 .navigate {
   background-color: var(--MAIN_COLOR);
   padding: 5px 2rem;
+  border-bottom: 1px solid var(--SECOND_COLOR);
+  position: sticky;
+  top: 0;
 }
 
 .navigate > ul {
@@ -120,6 +122,9 @@
 
 @media (max-width: 767px) {
   .header {
+    display: none;
+  }
+  .navigate {
     display: none;
   }
 }

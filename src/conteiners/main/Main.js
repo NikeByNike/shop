@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
 import { Input, Button } from "@material-ui/core";
 
 import * as cartActions from "../../actions/cartActions";
